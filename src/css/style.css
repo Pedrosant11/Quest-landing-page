@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: grid;
+    grid-template-areas: "header header header"
+                         "hero hero hero"
+                         "services services services"
+                         "about about about"
+                         "coments coments coments"
+                         "email email email"
+                         "footer footer footer";
+    grid-template-columns: repeat(3, 1fr);
+    font-size: 1.4rem;
+    font-family: 'Releway', sans-serif;
+    background-color: var(--dark-theme);
+}
+
+.header {
+    grid-area: header;
+}
+
+.header .header-container {
+    display: flex;
+    padding: 40px 40px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header nav ul {
+    display: flex;
+}
+
+.header nav ul li a {
+    padding: 10px;
+    margin-left: 20px;
+}
+
+.header nav ul li a:hover {
+    font-weight: 700;
+}
+
+.hero {
+    grid-area: hero;
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.hero .main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 30px 0;
+}
+
+.hero .main img {
+    width: 700px;
+    margin-bottom: 35px;
+}
+
+.hero .main .titulo {
+    color: var(--white);
+    font-size: 4rem;
+    font-weight: 700;
+    width: 700px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.hero .main .info {
+    color: var(--white);
+    width: 500px;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    line-height: 24px;
+    margin-bottom: 30px;
+    font-size: 1.6rem;
+}
+
+.hero .main .button {
+    color: var(--white);
+    background: linear-gradient(45deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    padding: 15px;
+    border-radius: 50px;
+    width: 200px;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    transition: 0.3s ease-in-out;
+}
+
+.hero .main .button:hover {
+    background: linear-gradient(45deg, hsl(198, 60%, 50%), hsl(176, 68%, 64%));
+}
+
+.services {
+    grid-area: services;
+    display: grid;
+    grid-template-columns: 400px 400px;
+    margin: 30px auto;
+}
+
+.services .service {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.services .service img {
+    margin-bottom: 15px;
+}
+
+.services .service .titulos {
+    font-size: 1.6rem;
+    color: var(--white);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.services .service .info {
+    font-size: 1.4rem;
+    color: var(--white);
+    line-height: 20px;
+    width: 350px;
+}
+
+.about {
+    grid-area: about;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    margin: 40px 120px;
+}
+
+.about .about-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--white);
+}
+
+.about .about-info .titulo {
+    font-size: 2.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 35px;
+}
+
+.about .about-info .info {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    line-height: 20px;
+}
+
+.about .about-info .link {
+    display: flex;
+    align-items: center;
+}
+
+.about .about-info .link .button {
+    border-bottom: 1px solid hsl(176, 68%, 64%);
+    color: var(--call-to-action);
+}
+
+.coments {
+    grid-area: coments;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 30px auto;
+    column-gap: 70px;
+}
+
+.coments .container{
+    background-color: var(--testimonials);
+    width: 400px;
+    height: 180px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    border-radius: 5px;
+    position: relative;
+    top: 33px;
+    left: 5px;
+}
+
+.coments .aspas {
+    position: absolute;
+}
+
+.coments .container .profile{
+    display: flex;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.coments .container .coment{
+    font-size: 1.6rem;
+    color: var(--white);
+}
+
+.coments .container .container-inside {
+    padding: 40px;
+}
+
+.coments .profile img{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.coments .container .info-profile .name{
+    color: var(--white);
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.coments .container .info-profile .company{
+    color: var(--white);
+    font-size: 0.9rem;
+}
+
+.email {
+    grid-area: email;
+    background-color: var(--email-box);
+    text-align: center;
+    margin: auto;
+    width: fit-content;
+    padding: 30px 60px;
+    position: relative;
+    z-index: 1;
+    top: 100px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.582);
+}
+
+.email h2 {
+    font-size: 2.5rem;
+    padding-top: 15px;
+    color: var(--white);
+}
+
+.email p {
+    width: 750px;
+    padding: 30px;
+    text-align: center;
+    color: var(--white);
+}
+
+.email form .email-input{
+    border-radius: 50px;
+    padding: 15px 0 15px 20px;
+    margin-right: 15px;
+    width: 550px;
+}
+
+.email form .email-submit {
+    background: linear-gradient(45deg, hsl(176, 68%, 64%), hsl(198, 60%, 50%));
+    padding: 15px 30px 15px 30px;
+    border-radius: 50px;
+}
+
+.email form .email-submit:hover {
+    background: linear-gradient(45deg, hsl(198, 60%, 50%), hsl(176, 68%, 64%));
+}
+
+.footer {
+    grid-area: footer;
+    background-color: var(--footer);
+    padding-top: 200px;
+}
+
+.footer .logo {
+    padding-left: 140px;
+}
+
+.footer .logo img {
+    width: 90px;
+}
+
+.footer .contact{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding-bottom: 70px;
+    padding-top: 35px;
+    margin: 0 25px;
+}
+
+.footer .contact .location{
+    display: flex;
+    align-content: flex-end;
+}
+
+.footer .contact .location img{
+    height: 15px;
+    margin-left: 10px;
+}
+
+.footer .contact .location p{
+    width: 350px;
+    margin-left: 20px;
+    position: relative;
+    bottom: 5px;
+    color: var(--white);
+}
+
+.footer .contact .phone-email a{
+    margin-left: 15px;
+    line-height: 30px;
+}
+
+.footer .contact .about-us ul li, 
+.footer .contact .contact-us ul li{
+    margin-bottom: 15px;
+}
+
+.footer .contact ul li a:hover{
+    font-weight: 700;
+}
+
+.footer .contact .social-icons i{
+    margin-left: 10px;
+    width: 30px;
+    font-size: 25px;
+    padding: 10px;
+    transition: 0.5;
+}
+
+.footer .contact .social-icons i:hover{
+    color: var(--call-to-action);
+    border-color: var(--call-to-action);
+}
