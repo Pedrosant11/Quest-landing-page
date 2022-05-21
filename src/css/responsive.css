@@ -1,6 +1,83 @@
+@media (max-width: 1350px) {
+    .coments{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10px;
+    }
+}
+
+@media(max-width:1110px){
+    .services {
+        display: block;
+    }
+
+    .coments{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        row-gap: 10px;
+    }
+
+    .coments .position{
+        display: none;
+}
+
+    .footer .contact{
+        display: block;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+}
+
+    .footer .location, .footer .location img{
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .logo {
+        padding-left: 0;
+        text-align: center;
+    }
+
+    .email {
+        width: 100%;
+        max-width: 700px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .email p{
+        width: 100%;
+        
+    }
+
+    .email form{
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .email form .email-input{
+        width: 100%;
+        margin-right: 0;
+    }
+
+    .email form a{
+        margin-top: 10px;
+        width: 100%;
+    }
+
+
+}
+
 @media(max-width:720px){
     .header .header-container{
-        display: block;
+        display: flex;
+        flex-direction: column;
         text-align: center;
     }
 
@@ -114,63 +191,3 @@
 
 }
 
-@media(max-width:1110px){
-    .services {
-        display: block;
-    }
-
-    .coments{
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-        row-gap: 10px;
-    }
-
-    .coments .position{
-        display: none;
-}
-
-    .footer .contact{
-        display: block;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-}
-
-    .footer .location, .footer .location img{
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .footer .logo {
-        padding-left: 0;
-        text-align: center;
-    }
-
-    .email {
-        width: 700px;
-        display: flex;
-        flex-direction: column;
-        
-    }
-
-    .email p{
-        width: 100%;
-        
-    }
-
-    .email form{
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-    }
-
-    .email form a{
-        margin-top: 10px;
-        width: 550px;
-    }
-
-
-}
